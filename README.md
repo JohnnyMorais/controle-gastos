@@ -1,43 +1,63 @@
-# Sistema de Controle de Gastos
-
-Este é um projeto de controle financeiro pessoal, desenvolvido para ajudar no gerenciamento de despesas de forma prática e organizada.
-
-## 🚀 Tecnologias Utilizadas
-
+# Sistema de Controle de Gastos Residenciais
+ 
+Projeto Full-Stack desenvolvido como desafio técnico, focado em gerenciamento de transações financeiras e controle de fluxo de caixa para residentes.
+ 
+## 🛠 Tecnologias Utilizadas
+ 
 ### Back-end
-- **.NET** (API RESTful)
 
+* **.NET 8 (Web API)**
+
+* **C#**
+
+* **Entity Framework Core** (ORM)
+
+* **SQLite** (Banco de dados relacional para persistência local)
+ 
 ### Front-end
-- **React**
-- **TypeScript**
-- **Vite**
-- **CSS**
 
-## 📋 Funcionalidades
-- [ ] Cadastro de transações (entradas e saídas).
-- [ ] Visualização do saldo atual.
-- [ ] Interface responsiva para acompanhamento dos gastos.
+* **React**
+
+* **TypeScript**
+
+* **Vite**
+
+* **Axios** (Para consumo da API)
+ 
+---
+ 
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado em sua máquina:
+- [.NET SDK 10.0](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Git](https://git-scm.com/)
+
+---
 
 ## ⚙️ Como rodar o projeto
 
-Para rodar este projeto em sua máquina local, siga os passos abaixo:
+O projeto é composto por uma API (Back-end) e uma interface Web (Front-end). Para o funcionamento correto, **ambos devem estar rodando simultaneamente**.
 
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/JohnnyMorais/controle-gastos.git](https://github.com/JohnnyMorais/controle-gastos.git)
+### 1. Preparando o Banco de Dados
+Na raiz do projeto, navegue até a pasta da API e aplique as migrações:
+```bash
+cd ControleGastosApi
+dotnet ef database update
+2. Iniciando o Back-end
+Ainda na pasta ControleGastosApi, execute o comando:
 
-   Para a API:
+Bash
+dotnet run
+A API estará disponível em: http://localhost:5032
 
-Navegue até a pasta ControleGastosApi.
+3. Iniciando o Front-end
+Abra um novo terminal no VS Code, navegue até a pasta web e execute:
 
-Execute o comando para rodar a aplicação .NET.
+Bash
+cd controle-gastos-web
+npm install
+npm run dev
+O projeto estará disponível em: http://localhost:5173
 
-Para o Front-end:
-
-Navegue até a pasta controle-gastos-web.
-
-Instale as dependências: npm install
-
-Inicie o projeto: npm run dev
-
-Desenvolvido por Johnny Morais.
+Nota: Mantenha os dois terminais abertos para que a comunicação entre o Front-end e a API funcione perfeitamente.
