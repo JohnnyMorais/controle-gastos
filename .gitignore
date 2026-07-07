@@ -1,0 +1,11 @@
+# Pastas e arquivos do .NET
+bin/
+obj/
+.vs/
+*.db
+appsettings.Development.json
+
+# Pasta do Node (Front-end)
+node_modules/
+dist/
+.vite/
