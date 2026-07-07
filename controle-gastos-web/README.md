@@ -26,17 +26,38 @@ Projeto Full-Stack desenvolvido como desafio técnico, focado em gerenciamento d
  
 ---
  
-## 🚀 Como Executar o Projeto
- 
-Para rodar o sistema localmente, siga os passos abaixo em terminais separados:
- 
-### 1. Back-end
+## 📋 Pré-requisitos
 
-1. Navegue até a pasta `ControleGastosApi`.
+Antes de começar, certifique-se de ter instalado em sua máquina:
+- [.NET SDK 10.0](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Git](https://git-scm.com/)
 
-2. Restaure as dependências e aplique as migrações:
+---
 
-   ```bash
+## ⚙️ Como rodar o projeto
 
-   dotnet ef database update
- 
+O projeto é composto por uma API (Back-end) e uma interface Web (Front-end). Para o funcionamento correto, **ambos devem estar rodando simultaneamente**.
+
+### 1. Preparando o Banco de Dados
+Na raiz do projeto, navegue até a pasta da API e aplique as migrações:
+```bash
+cd ControleGastosApi
+dotnet ef database update
+2. Iniciando o Back-end
+Ainda na pasta ControleGastosApi, execute o comando:
+
+Bash
+dotnet run
+A API estará disponível em: http://localhost:5032
+
+3. Iniciando o Front-end
+Abra um novo terminal no VS Code, navegue até a pasta web e execute:
+
+Bash
+cd controle-gastos-web
+npm install
+npm run dev
+O projeto estará disponível em: http://localhost:5173
+
+Nota: Mantenha os dois terminais abertos para que a comunicação entre o Front-end e a API funcione perfeitamente.
